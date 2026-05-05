@@ -121,6 +121,8 @@ Staging Deduplicated Table
 BigQuery Data Modeling
     ↓
 Power BI Dashboard
+```
+
 ### 5.1 Power Query Preprocessing
 
 Power Query was used as the first preprocessing layer before the Python pipeline.
@@ -538,63 +540,4 @@ Run the SQL script to create the fact table and dimension-ready fields.
 ### Step 5: Connect Power BI
 
 Connect Power BI to the processed tables and refresh the dashboard.
-
----
-
-## 13. Auto-Refresh Design
-
-The recommended production workflow is:
-
-```text
-Python Pipeline → BigQuery → Power BI Service → Scheduled Refresh
-```
-
-Power BI Service can be configured to refresh the dashboard daily after the data pipeline updates the warehouse table.
-
-This turns the dashboard from a static report into an automated reporting system.
-
----
-
-## 14. Business Value
-
-This project helps marketing teams:
-
-- identify winning platforms, formats, and content categories
-- optimize posting schedules
-- improve paid vs organic distribution strategy
-- detect high-potential regions and hashtags
-- reduce decision-making based on intuition
-- build a repeatable reporting system for social media performance monitoring
-
----
-
-## 15. Limitations
-
-- Click-related metrics are only reliable for posts with valid tracking data.
-- Hashtag performance may be affected by sample size.
-- Regional analysis should be interpreted carefully if some markets have fewer posts.
-- Dashboard insights are based on historical performance and should be validated through future A/B testing.
-- The latest time period should be checked for data completeness before interpreting trend drops.
-
----
-
-## 16. Future Improvements
-
-Potential improvements include:
-
-- automated pipeline scheduling
-- incremental refresh in Power BI
-- anomaly detection for sudden performance drops
-- predictive modeling for post performance
-- campaign-level ROI analysis
-- recommendation logic for platform-content-time combinations
-- A/B testing framework for content and posting time experiments
-
----
-
-## 17. Author
-
-Created by: [Your Name]  
-Role: Data Analyst / Business Analytics Student  
-Project Type: Data Analytics Portfolio Project
 
